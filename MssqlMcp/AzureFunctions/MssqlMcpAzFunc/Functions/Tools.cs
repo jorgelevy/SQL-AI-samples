@@ -271,7 +271,7 @@ GROUP BY
 
     [Function("InsertData")]
     public async Task<string> InsertData(
-        [McpToolTrigger("insert_data", "Updates data in a table in the SQL Database. Expects a valid INSERT SQL statement as input.")] ToolInvocationContext context,
+        [McpToolTrigger("insert_data", "Inserts data into a table in the SQL Database. Expects a valid INSERT SQL statement as input.")] ToolInvocationContext context,
         [McpToolProperty("sql", "INSERT SQL statement")] string sql)
     {
         var conn = await _connectionFactory.GetOpenConnectionAsync();
